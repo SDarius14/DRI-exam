@@ -1,0 +1,622 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.navbar-brand {
+  display: flex;
+  text-decoration: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.navbar-logo {
+  display: none;
+}
+
+.navbar-logo-small {
+  display: inline-block;
+  scale: 50%;
+
+}
+
+
+.navbar-nav {
+  visibility: hidden;
+}
+
+
+#home-section {
+  background-color: #f2f2f2;
+}
+
+
+.carousel {
+  margin: 2rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.slide-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.slide {
+  display: flex;
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  content-visibility: auto;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+.slide-content h1 {
+  font-weight: 700;
+}
+
+.slide-content p {
+  font-weight: 300;
+}
+
+.slide-content .btn,
+h1,
+p {
+  margin-top: 1rem;
+  font-family: "Readex Pro";
+}
+
+.slide-content p {
+  font-family: "Inter";
+  font-size: 15px;
+  color: #666666;
+}
+
+.slide-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slide:nth-child(1) {
+  background-color: #d2d9d5;
+}
+
+.slide:nth-child(2) {
+  background-color: #c5dbe2;
+}
+
+.slide:nth-child(3) {
+  background-color: whitesmoke;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.indicator {
+  text-align: center;
+  margin-top: 2px;
+}
+
+.dot {
+  display: inline-block;
+  width: 100x;
+  height: 3px;
+  background-color: #ccc;
+  border-radius: 10%;
+  margin: 0 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dot.active {
+  background-color: #1f1f1f;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+  border: 1px solid black;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+#products-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  /* Add margin to separate from the card-container */
+  flex-direction: column;
+  /* Stack the card-sections vertically */
+
+  /* Horizontally center the card-sections */
+  background-color: #f2f2f2;
+}
+
+.products-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'one'
+    'three'
+    'four'
+    'two';
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+
+.card-1 {
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  grid-area: one;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-1 img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  margin-left: 2rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 2rem 2rem;
+}
+
+
+
+.card-2 {
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  grid-area: two;
+  display: flex;
+  height: 200px;
+}
+
+.card-2>.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-2 img {
+  top: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: 2rem;
+
+}
+
+.card-2>.card-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 2rem 0 2rem;
+}
+
+.card-3,
+.card-4 {
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  grid-area: three;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.card-3 img,
+.card-4 img {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-3 img {
+  margin-left: 2rem;
+  scale: 110%;
+
+}
+
+.card-4 img {
+  scale: 130%;
+}
+
+
+.card-3 .card-content,
+.card-4 .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem;
+}
+
+.card-4 {
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  grid-area: four;
+  height: auto;
+}
+
+
+
+
+.card-1 h5,
+.card-1 h2 {
+  text-align: right;
+}
+
+.card-1 h5 {
+  font-size: 16px;
+  color: #666666;
+  font-family: "Inter";
+
+}
+
+.card-1 h2 {
+  font-size: 24px;
+  font-family: "Readex Pro";
+  border-radius: 0 0 50px 50px;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.card-4:hover {
+  scale: 102%;
+  border: 1px solid #d9d9d9;
+  box-shadow: 1px 1px 5px 5px#dbdbdb;
+  border-radius: 15px;
+}
+
+
+
+.card-2 h5,
+.card-2 h2 {
+  text-align: right;
+}
+
+.card-2 h5 {
+  font-size: 16px;
+  color: #666666;
+  font-family: "Inter";
+
+}
+
+.card-2 h2 {
+  font-size: 24px;
+  font-family: "Readex Pro";
+  border-radius: 0 0 50px 50px;
+}
+
+
+.card-3 img {
+  object-fit: cover;
+}
+
+.card-4 img {
+  object-fit: cover;
+}
+
+.card-3 h5,
+.card-3 h2,
+.card-4 h5,
+.card-4 h2 {
+  text-align: center;
+}
+
+.card-3 h5,
+.card-4 h5 {
+  font-size: 16px;
+  color: #666666;
+  font-family: "Inter";
+
+}
+
+.card-3 h2,
+.card-4 h2 {
+  font-size: 24px;
+  font-family: "Readex Pro";
+  border-radius: 0 0 50px 50px;
+}
+
+
+
+.le-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.le-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.le-img {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background-color: white;
+}
+
+.le-img>img:hover {
+  scale: 110%;
+}
+
+.le-content {
+  margin: 1rem;
+}
+
+
+
+.le-img>img {
+  height: 200px;
+  margin: 2rem;
+  object-fit: scale-down;
+}
+
+
+.le-content h4,
+.bs-content h3 {
+  font-size: 20px;
+  font-family: "Readex Pro";
+}
+
+.le-content p,
+.bs-content p {
+  font-size: 12px;
+  font-family: "Inter";
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.bs-content p {
+  color: black;
+  margin-bottom: 0;
+}
+
+
+
+.le-content h6 {
+  font-size: 18px;
+  font-family: "Inter";
+
+}
+
+#best-seller-section {
+  background-color: white;
+  padding: 3rem;
+}
+
+.bs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.bs-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+
+}
+
+.bs-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.bs-content>* {
+  margin-bottom: 10px;
+}
+
+
+.bs-img {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  align-items: center
+}
+
+.bs-img img {
+  width: auto;
+  height: 200px;
+}
+
+
+@media (min-width: 768px) {
+  .navbar-logo {
+    display: inline-block;
+  }
+
+  .navbar-logo-small {
+    display: none;
+  }
+
+  .navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    visibility: visible;
+  }
+
+  .nav-item {
+    margin-left: 10px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-family: 'Readex Pro';
+  }
+
+  .nav-link:hover {
+    background-color: #ccc;
+  }
+
+  .slide {
+    display: flex;
+    flex: 0 0 100%;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    flex-direction: row;
+
+  }
+
+  .slide-img {
+    width: 40%;
+    display: flex;
+    align-self: center;
+  }
+
+
+  .slide-img img {
+    width: 100%;
+    object-fit: cover;
+    bottom: 0;
+    position: relative;
+  }
+
+  .slide-content {
+    width: 60%;
+    text-align: left;
+    padding-top: 0;
+    padding-left: 5rem;
+    align-items: flex-start;
+  }
+
+  .card-container {
+    grid-template-areas:
+      "one one three four"
+      "one one three four"
+      "two two three four";
+  }
+
+  .card-3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-4 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .le-container {
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .bs-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .bs-img img {
+    width: 300px;
+    height: auto;
+  }
+
+}
